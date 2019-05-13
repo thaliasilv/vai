@@ -32,4 +32,20 @@ echo "Você deve inserir o email.";
         exibir ("cliente/cliente");
     }
 }
-?>
+
+require_once "modelo/clienteModelo.php";
+function adicionar(){
+	if (ehPost)){
+	$nome= $_POST["nome"];
+	$email= $_POST["email"];
+	$senha= $_POST["senha"];
+        $senha_novamente= $_POST["senhanovamente"];
+    $msg=adicionarCliente($nome, $email, $senha);
+    echo $msg;
+
+}else{
+    echo "Não é post";
+
+}
+exibir(cliente/formulario);
+}
