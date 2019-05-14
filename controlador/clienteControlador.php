@@ -1,6 +1,8 @@
 <?php
 
-function cadastro(){
+require_once "modelo/clienteModelo.php";
+
+/*function cadastro(){
     if(ehPost()){
 //Validações Obrigatórias      
 if (strlen(trim($_POST['nome'])) == 0) {
@@ -32,10 +34,10 @@ echo "Você deve inserir o email.";
         exibir ("cliente/cliente");
     }
 }
+*/
 
-require_once "modelo/clienteModelo.php";
 function adicionar(){
-	if (ehPost)){
+	if ((ehPost())){
 	$nome= $_POST["nome"];
 	$email= $_POST["email"];
 	$senha= $_POST["senha"];
@@ -47,5 +49,21 @@ function adicionar(){
     echo "Não é post";
 
 }
-exibir(cliente/formulario);
+exibir("cliente/formulario");
+}
+
+
+function cadastro (){
+    if(ehPost()){
+        $nome = $_POST['nomec'];
+        $cpf = $_POST['cpfc'];
+        $telefone = $_POST['telc'];
+        $sexo = $_POST['sexc'];
+        $email = $_POST['emailc'];
+        $senha = $_POST['senhac'];
+        $dataNc = $_POST['dataNc'];       
+        print_r($_POST);
+    }else{
+        exibir('cliente/cadastro');
+    }
 }
