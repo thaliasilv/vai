@@ -1,8 +1,8 @@
 <?php
+require_once "servico/validacaoServico.php";
 
 require_once "modelo/clienteModelo.php";
-
-/*function cadastro(){
+function cadastro(){
     if(ehPost()){
 //Validações Obrigatórias      
 if (strlen(trim($_POST['nome'])) == 0) {
@@ -34,7 +34,6 @@ echo "Você deve inserir o email.";
         exibir ("cliente/cliente");
     }
 }
-*/
 
 function adicionar(){
 	if ((ehPost())){
@@ -42,7 +41,10 @@ function adicionar(){
 	$email= $_POST["email"];
 	$senha= $_POST["senha"];
         $senha_novamente= $_POST["senhanovamente"];
+         echo nao_vazio_e_limite($nome);
     $msg=adicionarCliente($nome, $email, $senha);
+    
+   
     echo $msg;
 
 }else{
@@ -61,8 +63,18 @@ function cadastro (){
         $sexo = $_POST['sexc'];
         $email = $_POST['emailc'];
         $senha = $_POST['senhac'];
-        $dataNc = $_POST['dataNc'];       
+        $senha = $_POST['dataNc'];  
+        //validações
+        echo nao_vazio_e_limite($nome);
+         echo nao_vazio_e_limite($ $cpf);
+          echo nao_vazio_e_limite($telefone);
+           echo nao_vazio_e_limite($sexo);
+            echo nao_vazio_e_limite($email);
+             echo nao_vazio_e_limite($senha);
+              echo nao_vazio_e_limite($senha);
         print_r($_POST);
+        
+     
     }else{
         exibir('cliente/cadastro');
     }
