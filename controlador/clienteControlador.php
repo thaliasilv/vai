@@ -2,7 +2,7 @@
 require_once "servico/validacaoServico.php";
 
 require_once "modelo/clienteModelo.php";
-function cadastro(){
+function cadastro2(){
     if(ehPost()){
 //Validações Obrigatórias      
 if (strlen(trim($_POST['nome'])) == 0) {
