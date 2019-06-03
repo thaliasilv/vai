@@ -1,4 +1,5 @@
 <?php
+require_once "modelo/produtoModelo.php";
 
 function visualizar() {
 
@@ -12,7 +13,7 @@ function visualizar() {
 function adicionar() {
     if (ehPost()) {
 
-//Validações Obrigatórias      
+/*Validações Obrigatórias      
         if (strlen(trim($_POST['NomeProduto'])) == 0) {
             echo "Você deve inserir o nome produto.";
         }
@@ -34,16 +35,26 @@ function adicionar() {
         // html e javascript
         echo "<BR><BR>Validacao HTML<br>";
         echo strip_tags($_POST["NomeProduto"]);
-        echo htmlentities($_POST["CodigoProduto"]);
+        echo htmlentities($_POST["CodigoProduto"]);*/
 
 
         $nome = $_POST["NomeProduto"];
         $CodigoProduto = $_POST["CodigoProduto"];
+        $QuantidadeProduto = $_POST["QuantidadeProduto"];
+        $CategoriaProduto = $_POST["CategoriaProduto"];
         $DescriProduto = $_POST["DescriProduto"];
         $PreProduto = $_POST["PreProduto"];
-        $QuantidadeProduto = $_POST["QuantidadeProduto"];
-        //print_r($_POST);
+        $CodigoFabricante = $_POST["CodFabricante"];
+        
+        $msg = adicionarProduto($nome, $CodigoProduto, $CategoriaProduto, $CodigoFabricante, $DescriProduto, $QuantidadeProduto, $PreProduto);
+         echo $msg;
     } else {
         exibir("produtos/formulario");
     }
+}
+
+function listar(){
+    $dados = array();
+    $dados["produtos"] = seleciona_todos_os_produtos();
+    exibir('produtos/listar', $dados);
 }
