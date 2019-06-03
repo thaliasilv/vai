@@ -23,7 +23,7 @@ INSERT INTO `mvcd`.`usuario` (`nome`, `senha`, `email`, `papel`) VALUES ('usuari
         nome varchar(100) not null,
         apelido varchar(50) not null,
         encereco varchar(70) not null,
-        cpf varchar(20) not null,
+        cpf varchar(11) not null,
         cidade varchar(35) not null,
         estado varchar(25) not null,
         aniversario varchar(40) not null,
@@ -32,3 +32,13 @@ INSERT INTO `mvcd`.`usuario` (`nome`, `senha`, `email`, `papel`) VALUES ('usuari
         primary key(id_cliente)
    );
 
+ create table produto(
+     nome varchar(60) not null,
+     cod int(10) unsigned not null,
+     categ varchar(15) not null,
+     cod_fabri int(10) unsigned not null,
+     descr varchar(100),
+     quant int(3) unsigned not null,
+     preco double(10,2) unsigned not null,
+     primary key(cod)
+     );
