@@ -1,7 +1,7 @@
 <?php
 
 function adicionarProduto($nome, $CodigoProduto, $CategoriaProduto, $CodigoFabricante, $DescriProduto, $QuantidadeProduto, $PreProduto){
-    $comando= "INSERT INTO produto (nome, cod, categ, cod_fabri, descr, quant, preco)
+    $comando= "INSERT INTO produto (nome, cod, categ,descr, quant, preco)
     Values ('$nome', '$CodigoProduto', '$CategoriaProduto', '$CodigoFabricante', '$DescriProduto', '$QuantidadeProduto', '$PreProduto')";
 
     $resultado= mysqli_query($cnx=conn(), $comando);
@@ -17,5 +17,13 @@ function seleciona_todos_os_produtos(){
     while($linha = mysqli_fetch_assoc($result)){
         $produtos[] = $linha;
     }
+    return $produtos;
+}
+
+function MostrarProdutoPorCodigo($cod){
+    $sql = "select * from produto where cod = $cod";
+    $result = mysqli_query(conn(), $sql);
+    $produtos = mysqli_fetch_assoc($result);
+    
     return $produtos;
 }
