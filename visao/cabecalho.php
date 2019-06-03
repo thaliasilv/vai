@@ -1,8 +1,6 @@
-
-
 <div id="tudo">
 	<div id="cima" style="height: 10%;">
-		<img style=" width: 15%; padding: 1%; " src="imagens/logo.png">
+		<img style=" width: 15%; padding: 1%; " src="./publico/img/logo/logo.png">
 		 <div class="ui disabled category search" style="float: right; margin-top: 6%;">
 		  <div class="ui icon input">
 		    <input class="prompt" type="text" placeholder="Pesquisar">
@@ -11,22 +9,19 @@
 		  <div class="results"></div>
 		</div>
 		<div id="carrinho" style="float: right; margin-right: 5%; margin-top: 6%;">
-			<a  href="car.html"><i class="cart plus icon"> Carrinho</i>
-		</div>	   
+			<a  href=""><i class="cart plus icon"> Carrinho</i>
+		</div><!-- ALTERAR CAMINHO PARA O CARRINHO (HREF) -->
 	</div>
 
-	<div id="Menu" style="height: 10%; margin-bottom: 3%;">
-	<div class="navbar">
-                       <a  style="padding: 1%; margin: 0% 5%;"class="active" href="#"><i class="home icon"></i> Home</a> 
-                       <a style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Roupas</a> 
-                       <a style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Acessórios</a> 
-                       <a  style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Sapatos</a> 
-                       <a  style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Outros</a> 
-                       <a  style="padding: 1%; margin-right: 4%;" href="login.html"><i class="user circle icon"></i> Login</a>
-                       <a  style="padding: 1%; margin-right: 4%;" href="cadrastro_cliente.html"><i class="user outline icon"></i> Cadastre-se</a>
-	 
+	<div id="Menu" style="height: 10%; margin-bottom: 3%; margin-top: 5%;">
+		<div class="navbar">
+		<a  style="padding: 1%; margin: 0% 5%;"class="active" href="#"><i class="home icon"></i> Home</a> 
+		<a style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Roupas</a> 
+		<a style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Acessórios</a> 
+		<a  style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Sapatos</a> 
+		<a  style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Outros</a> 
+		<a  style="padding: 1%; margin-right: 4%;" href="login.html"><i class="user circle icon"></i> Login</a>
+		<a  style="padding: 1%; margin-right: 4%;" href="cadrastro_cliente.html"><i class="user outline icon"></i> Cadastre-se</a>
   		</div>
 	</div>
 </div>
-
-
