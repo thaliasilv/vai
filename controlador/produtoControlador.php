@@ -58,3 +58,8 @@ function listar(){
     $dados["produtos"] = seleciona_todos_os_produtos();
     exibir('produtos/listar', $dados);
 }
+
+function ver($cod){
+    $dados["produto"] = MostrarProdutoPorCodigo($cod);
+    exibir('produtos/visualizar', $dados);
+}
