@@ -1,8 +1,9 @@
 <?php
 require_once "servico/validacaoServico.php";
-
 require_once "modelo/clienteModelo.php";
-function cadastro2(){
+
+
+/*function cadastro2(){
     if(ehPost()){
 //Validações Obrigatórias      
 if (strlen(trim($_POST['nome'])) == 0) {
@@ -52,7 +53,7 @@ function adicionar(){
 
 }
 exibir("cliente/formulario");
-}
+}*/
 
 
 function cadastro (){
@@ -66,16 +67,27 @@ function cadastro (){
         $senha = $_POST['dataNc'];  
         //validações
         echo nao_vazio_e_limite($nome);
-         echo nao_vazio_e_limite($ $cpf);
-          echo nao_vazio_e_limite($telefone);
-           echo nao_vazio_e_limite($sexo);
-            echo nao_vazio_e_limite($email);
-             echo nao_vazio_e_limite($senha);
-              echo nao_vazio_e_limite($senha);
+        echo nao_vazio_e_limite($ $cpf);
+        echo nao_vazio_e_limite($telefone);
+        echo nao_vazio_e_limite($sexo);
+        echo nao_vazio_e_limite($email);
+        echo nao_vazio_e_limite($senha);
+        echo nao_vazio_e_limite($senha);
         print_r($_POST);
         
      
     }else{
         exibir('cliente/cadastro');
     }
+}
+
+function listar(){
+    $dados = array();
+    $dados["clientes"] = seleciona_todos_os_clientes();
+    exibir('cliente/listar', $dados);
+}
+
+function ver($cod){
+    $dados["clientes"] = MostrarClientePorCodigo($cod);
+    exibir('cliente/visualizar', $dados);
 }

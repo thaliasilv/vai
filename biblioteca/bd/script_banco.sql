@@ -18,8 +18,12 @@ INSERT INTO `mvcd`.`usuario` (`nome`, `senha`, `email`, `papel`) VALUES ('admin'
 INSERT INTO `mvcd`.`usuario` (`nome`, `senha`, `email`, `papel`) VALUES ('usuario', '123', 'usuario@usuario', 'usuario');
 
 
+ CREATE DATABASE bazarty;
+
+ USE bazarty;
+
  create table cliente(
-        `id_cliente` integer unsigned not null auto_increment,
+        id_cliente integer unsigned not null auto_increment,
         nome varchar(100) not null,
         apelido varchar(50) not null,
         encereco varchar(70) not null,
@@ -41,4 +45,10 @@ INSERT INTO `mvcd`.`usuario` (`nome`, `senha`, `email`, `papel`) VALUES ('usuari
      quant int(3) unsigned not null,
      preco double(10,2) unsigned not null,
      primary key(cod)
+     );
+
+create table categoria(
+     cod_categoria int(10) unsigned not null auto_increment,
+     Nome varchar(30) not null,
+     primary key(cod_categoria)
      );

@@ -1,3 +1,5 @@
+<h2 style="color: orange; margin-top: 5%;"> Cadastre seu Produto</h2>
+<hr align="center" width="100%" size="1" color="orange">
 <form action="" method="POST">
     Nome do Produto: <input type="text" name=" NomeProduto"><br><br>
     Codigo do Produto:<input type="text" name="CodigoProduto"><br><br>

@@ -20,8 +20,8 @@
 		<a style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Acessórios</a> 
 		<a  style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Sapatos</a> 
 		<a  style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Outros</a> 
-		<a  style="padding: 1%; margin-right: 4%;" href="login.html"><i class="user circle icon"></i> Login</a>
-		<a  style="padding: 1%; margin-right: 4%;" href="cadrastro_cliente.html"><i class="user outline icon"></i> Cadastre-se</a>
+		<a  style="padding: 1%; margin-right: 2%;" href="login.html"><i class="user circle icon"></i> Login</a>
+                <a  style="padding: 1%; margin-right: 4%;" href="./cliente/cadastro/"><i class="user outline icon"></i> Cadastre-se</a>
   		</div>
 	</div>
 </div>
