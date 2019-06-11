@@ -1,6 +1,12 @@
 <?php
 require_once "modelo/produtoModelo.php";
 
+require_once "modelo/categoriaModelo.php";
+
+function index() {
+    redirecionar("produto/listar");
+}
+
 function adicionar() {
     if (ehPost()) {
 
@@ -30,17 +36,20 @@ function adicionar() {
 
 
         $nome = $_POST["NomeProduto"];
-        $CodigoProduto = $_POST["CodigoProduto"];
-        $QuantidadeProduto = $_POST["QuantidadeProduto"];
         $CategoriaProduto = $_POST["CategoriaProduto"];
         $DescriProduto = $_POST["DescriProduto"];
+        $ImagemProduto = $_POST["ImagemProduto"];
         $PreProduto = $_POST["PreProduto"];
-        $CodigoFabricante = $_POST["CodFabricante"];
+        $estoqueMin = $_POST["eMin"];
+        $estoqueMax = $_POST["eMax"];
         
-        $msg = adicionarProduto($nome, $CodigoProduto, $CategoriaProduto, $CodigoFabricante, $DescriProduto, $QuantidadeProduto, $PreProduto);
+        
+        
+        $msg = adicionarProduto($nome, $CategoriaProduto, $DescriProduto, $ImagemProduto, $PreProduto, $estoqueMin, $estoqueMax);
          echo $msg;
     } else {
-        exibir("produtos/formulario");
+        $dados["categorias"] = seleciona_todas_as_categorias();
+        exibir("produtos/formulario",$dados);
     }
 }
 
@@ -53,4 +62,9 @@ function listar(){
 function ver($cod){
     $dados["produto"] = MostrarProdutoPorCodigo($cod);
     exibir('produtos/visualizar', $dados);
+}
+
+function deletar($id) {
+    deletarProduto($id);
+    redirecionar("produto/listar");
 }

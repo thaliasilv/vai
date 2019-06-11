@@ -24,4 +24,9 @@ function ver($cod){
     exibir('categorias/visualizar', $dados);
 }
 
+function deletar($cod) {
+    deletarCategoria($cod);
+    redirecionar("categoria/listar");
+}
+
 

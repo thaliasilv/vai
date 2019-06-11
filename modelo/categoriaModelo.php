@@ -26,3 +26,15 @@ function MostrarCategoriaPorCodigo($cod){
     return $categorias;
 }
 
+function deletarCategoria($cod) {
+     $comando= "DELETE FROM categoria WHERE cod_categoria=$cod";
+     $conexao= conn();
+     $resultado= mysqli_query($conexao, $comando);
+   
+     if($resultado==true){
+       echo "Deu certo!";
+   }else {
+       echo "Deu errado";
+   }
+}
+

@@ -15,7 +15,7 @@
 
 	<div id="Menu" style="height: 10%; margin-bottom: 3%; margin-top: 5%;">
 		<div class="navbar">
-		<a  style="padding: 1%; margin: 0% 5%;"class="active" href="#"><i class="home icon"></i> Home</a> 
+		<a  style="padding: 1%; margin: 0% 5%;"class="active" href="./produto/listar/"><i class="home icon"></i> Home</a> 
 		<a style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Roupas</a> 
 		<a style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Acessórios</a> 
 		<a  style="padding: 1%; margin-right: 4%;" href="#"><i class="shopping bag icon"></i> Sapatos</a> 

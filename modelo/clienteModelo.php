@@ -1,11 +1,11 @@
 <?php 
 
-function adicionarClinte($nome, $cpf, $telefone,$sexo, $dataNc , $email,  $senha){
-    $comando= "INSERT INTO cliente (nome, telefone, sexo, dataNc, email, senha)
-    Values ('$nome', '$cpf', '$telefone','$sexo',' $dataNc', '$email',  '$senha')";
+function adicionarCliente($nome, $cpf, $sexo, $aniversario, $email,  $senha, $tipo){
+    $comando= "INSERT INTO cliente (nome, cpf, sexo, aniversario, email, senha, tipo)
+    Values ('$nome', '$cpf','$sexo','$aniversario', '$email', '$senha', '$tipo')";
 
-    $resultado= mysql_query($cnx=conn(), $comando);
-    if (!$resultado){die ('Erro ao cadastrar cliente'. mysql_error($cnx)); }
+    $resultado= mysqli_query($cnx=conn(), $comando);
+    if (!$resultado){die ('Erro ao cadastrar cliente'. mysqli_error($cnx)); }
 return 'Cliente cadastrado com sucesso!';
 
 }
@@ -26,6 +26,18 @@ function MostrarClientePorCodigo($cod){
     $clientes = mysqli_fetch_assoc($result);
     
     return $clientes;
+}
+
+function deletarCliente($idCliente) {
+     $comando= "DELETE FROM cliente WHERE id_cliente=$idCliente";
+     $conexao= conn();
+     $resultado= mysqli_query($conexao, $comando);
+   
+     if($resultado==true){
+       echo "Deu certo!";
+   }else {
+       echo "Deu errado";
+   }
 }
 
  ?>

@@ -1,13 +1,8 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        
-        <h2>Nome: <?= $produto["nome"]?></h2>
+<h2 style="color: orange; margin-top: 5%;"> <?= $produto["nome"]?> </h2>
+<hr align="center" width="100%" size="1" color="orange">
+<div class="corpinho">
+    <div class="caixinha">
         <h4>Descrição: <?= $produto["descr"]?></h4>
         <h4>Preço: <?= $produto["preco"]?></h4>
-        
-    </body>
-</html>
+    </div>
+</div>

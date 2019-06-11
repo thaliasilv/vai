@@ -10,7 +10,7 @@
 
         
       <div class="tr">
-      	<a  style="padding: 1%; margin-right: 4%; margin-bottom: 4%" href="administrador.html"><i class="user outline icon"></i> Administrador</a>
+      	<a  style="padding: 1%; margin-right: 4%; margin-bottom: 4%" href="./admin/index/"><i class="user outline icon"></i> Administrador</a>
        
         <p class="dp">Telefone para contato: (15) 3376-9930</p>
       </div>

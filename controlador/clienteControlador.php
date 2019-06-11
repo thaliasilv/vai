@@ -60,20 +60,18 @@ function cadastro (){
     if(ehPost()){
         $nome = $_POST['nomec'];
         $cpf = $_POST['cpfc'];
-        $telefone = $_POST['telc'];
         $sexo = $_POST['sexc'];
+        $aniversario = $_POST['dataNc'];
         $email = $_POST['emailc'];
         $senha = $_POST['senhac'];
-        $senha = $_POST['dataNc'];  
+        $tipo = $_POST['tipoc']; 
+        
         //validações
         echo nao_vazio_e_limite($nome);
-        echo nao_vazio_e_limite($ $cpf);
-        echo nao_vazio_e_limite($telefone);
+        echo nao_vazio_e_limite($cpf);
         echo nao_vazio_e_limite($sexo);
-        echo nao_vazio_e_limite($email);
         echo nao_vazio_e_limite($senha);
-        echo nao_vazio_e_limite($senha);
-        print_r($_POST);
+        adicionarCliente($nome, $cpf, $sexo, $aniversario, $email,  $senha, $tipo);
         
      
     }else{
@@ -90,4 +88,9 @@ function listar(){
 function ver($cod){
     $dados["clientes"] = MostrarClientePorCodigo($cod);
     exibir('cliente/visualizar', $dados);
+}
+
+function deletar($idCliente) {
+    deletarCliente($idCliente);
+    redirecionar("cliente/listar");
 }

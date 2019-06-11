@@ -1,19 +1,26 @@
-<h3>Produtos</h3>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>  Nome     </th>
-                    <th>  E-mail   </th>
-                    <th>           </th>
-                </tr>
-            </thead>
-            <?php foreach ($clientes as $cliente):?>
-            <tr>
-                <td><?= $cliente["nome"]?></td>
-                <td><?= $cliente["email"]?></td>
-                <td><a href="./cliente/ver/<?=$cliente["id_cliente"]?>">Ver detalhes</a></td>
-            </tr>
-         
-            <?php endforeach;?>
-        </table>
+        <h2 style="color: orange; margin-top: 5%;"> Clientes cadastrados</h2>
+        <hr align="center" width="100%" size="1" color="orange">
+        <div class="corpinho">
+            <div class="caixinha">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>  Nome     </th>
+                            <th>  E-mail   </th>
+                            <th>           </th>
+                            <th>           </th>
+                        </tr>
+                    </thead>
+                    <?php foreach ($clientes as $cliente):?>
+                    <tr>
+                        <td><?= $cliente["nome"]?></td>
+                        <td><?= $cliente["email"]?></td>
+                        <td><a href="./cliente/ver/<?=$cliente["id_cliente"]?>">Ver detalhes</a></td>
+                        <td><a href="./cliente/deletar/<?=$cliente["id_cliente"]?>"> Deletar </a></td>
+                    </tr>
+
+                    <?php endforeach;?>
+                </table>
+            </div>
+        </div>
 

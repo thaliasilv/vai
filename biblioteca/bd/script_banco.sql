@@ -23,29 +23,30 @@ INSERT INTO `mvcd`.`usuario` (`nome`, `senha`, `email`, `papel`) VALUES ('usuari
  USE bazarty;
 
  create table cliente(
-        id_cliente integer unsigned not null auto_increment,
-        nome varchar(100) not null,
-        apelido varchar(50) not null,
-        encereco varchar(70) not null,
+        id_cliente int(11) unsigned not null auto_increment,
+        nome varchar(60) not null,
         cpf varchar(11) not null,
-        cidade varchar(35) not null,
-        estado varchar(25) not null,
+        sexo varchar (60) not null,
         aniversario varchar(40) not null,
         email varchar(50) not null,
         senha varchar(60) not null,
+        tipo varchar (5) not null,
         primary key(id_cliente)
    );
 
  create table produto(
+     id_produto int(11) unsigned not null auto_increment,
+     cod_categoria int(10) unsigned not null,
      nome varchar(60) not null,
-     cod int(10) unsigned not null,
-     categ varchar(15) not null,
-     cod_fabri int(10) unsigned not null,
-     descr varchar(100),
+     descr varchar(600),
      quant int(3) unsigned not null,
      preco double(10,2) unsigned not null,
-     primary key(cod)
+     estoque_minimo int (11) not null,
+     estoque_maximo int (11) not null,
+     primary key(id_produto),
+     foreign key (cod_categoria) references categoria (cod_categoria) on delete cascade on update cascade
      );
+
 
 create table categoria(
      cod_categoria int(10) unsigned not null auto_increment,

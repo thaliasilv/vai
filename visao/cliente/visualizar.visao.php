@@ -1,15 +1,12 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+
+        <h2 style="color: orange; margin-top: 5%;"> <?= $clientes["nome"]?> </h2>
+        <hr align="center" width="100%" size="1" color="orange">
+        <div class="corpinho">
+            <div class="caixinha">
+                <h4>E-mail: <?= $clientes["email"]?></h4>
+                <h4>Tipo: <?= $clientes["tipo"]?></h4>
+            </div>
+        </div>
         
-        <h2>Nome: <?= $clientes["nome"]?></h2>
-        <h4>Apelido: <?= $clientes["apelido"]?></h4>
-        <h4>Endereço: <?= $clientes["endereco"]?></h4>
-        
-    </body>
-</html>
 
 
