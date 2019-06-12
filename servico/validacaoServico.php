@@ -1,28 +1,29 @@
-<?php
-function nao_vazio($a){
-   if (strlen(trim($a)) == 0) {
-   return "Você deve inserir um valor.";
-}
-}
-function nao_vazio_e_inteiro($a){
-    $input['campo'] =
-filter_var($a, FILTER_VALIDATE_INT);
- if ($input['campo'] == FALSE) {
- return 'Informe um valor numérico.';
-}
-}
-
-
-function nao_vazio_e_limite($a){
-   if (strlen(trim($a)) == 0 && (strlen(trim($a)) <=10 )){
-   return "Você deve inserir um valor com limite.";
-}
+ <?php
+     function nao_vazio ($valor,$tipo){
+        if (strlen(trim($valor)) == 0) {
+            return "Você deve inserir um valor para $tipo.<br>";
+        }else{
+            return NULL;
+     }
+     }
+    function tipo_Especifico($valor,$tipo){
+        $input['valor'] = filter_var($valor, FILTER_VALIDATE_INT);
+        if ($input['valor'] == FALSE) {
+        return "Informe um $tipo válido.<br>";
+}else{
+    return NULL;
 }
 
-
-
-function nao_string ($a){
-    
+}
+    function  validando_email ($email){
+    $imput ['email']= filter_var($email, FILTER_VALIDATE_EMAIL); 
+    if ($imput ['email']== FALSE){
+        return 'Informe um e-mail válido.<br>';
+    } else {
+        return NULL;
+    }
+}
+    function nao_string ($a){    
     $input ['campo']= strip_tags($_POST["$a"]) &&  htmlentities($_POST["$a"]);
     $input= $_POST["$a"];
 }

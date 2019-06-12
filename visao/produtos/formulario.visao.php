@@ -12,12 +12,21 @@
                 <?php endforeach;?>
             </select><br><br>
             Descrição:<br> <input type="text" name="DescriProduto"><br><br>
-            Imagem: <br> <input type="text" name="ImagemProduto"><br><br>
             Preço: <br> <input type="text" name="PreProduto"><br><br>
-            Estoque mínimo:<br> <input type="text" name="eMin"><br><br>
-            Estoque máximo:<br> <input type="text" name="eMax"><br><br><br><br>
-            <button type="submit">Enviar</button>
+            Imagem: <br><input type="img" name="imagem"><br><br>
+            Estoque mínimo:<br> <input type="number" name="eMin"><br><br>
+            Estoque máximo:<br> <input type="number" name="eMax"><br><br><br><br>
+            <button style="color: orange" type="submit">Enviar</button>
+            
 
         </form>
+      
+              <?php if(ehPost()){
+             foreach ($errors as $erro){
+                echo"$erro <br>";
+            
+ }
+   }  
+   ?>
     </div>
 </div>

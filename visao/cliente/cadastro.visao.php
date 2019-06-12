@@ -1,5 +1,6 @@
         <h2 style="color: orange; margin-top: 5%;"> Cadastre-se aqui :]</h2>
         <hr align="center" width="100%" size="1" color="orange">
+  
 <div class="corpinho">
     <div class="caixinha">
         <form action="" method="POST">
@@ -19,8 +20,18 @@
 
                 <button type="submit">Cadastrar</button>
                 <br><br><br><br><br><br><br><br><br><br><br>
-                <a href="./cliente/listar/">Ver clientes cadastrados</a>
+                <a style="color: orange" href="./cliente/listar/">Ver clientes cadastrados</a>
+                
 
         </form>
+        
+        
+              <?php if(ehPost()){
+             foreach ($errors as $erro){
+                echo"$erro <br>";
+            
+ }
+   }  
+   ?>
     </div>
 </div>

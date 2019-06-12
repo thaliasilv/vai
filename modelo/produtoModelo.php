@@ -1,8 +1,8 @@
 <?php
 
-function adicionarProduto($nome, $CategoriaProduto, $DescriProduto, $ImagemProduto, $PreProduto, $estoqueMin, $estoqueMax){
+function adicionarProduto($nome, $CategoriaProduto, $DescriProduto, $imagem, $PreProduto, $estoqueMin, $estoqueMax){
     $comando= "INSERT INTO produto(nome, cod_categoria, descr, imagem, preco, estoque_minimo, estoque_maximo)
-    Values('$nome', '$CategoriaProduto','$DescriProduto', '$ImagemProduto', '$PreProduto', '$estoqueMin', '$estoqueMax')";
+    Values('$nome', '1','$DescriProduto', '$imagem','$PreProduto', '$estoqueMin', '$estoqueMax')";
 
     $resultado= mysqli_query($cnx=conn(), $comando);
     if (!$resultado){die ('Erro ao cadastrar o produto'. mysqli_error($cnx)); }

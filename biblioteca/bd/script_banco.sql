@@ -39,7 +39,7 @@ INSERT INTO `mvcd`.`usuario` (`nome`, `senha`, `email`, `papel`) VALUES ('usuari
      cod_categoria int(10) unsigned not null,
      nome varchar(60) not null,
      descr varchar(600),
-     quant int(3) unsigned not null,
+     imagem varchar (60),
      preco double(10,2) unsigned not null,
      estoque_minimo int (11) not null,
      estoque_maximo int (11) not null,
