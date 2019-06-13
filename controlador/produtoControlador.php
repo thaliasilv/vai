@@ -28,8 +28,8 @@ function adicionar() {
          if (nao_vazio($DescriProduto, "DescriProduto") != NULL) {
             $errors[] = nao_vazio($DescriProduto, "DescriProduto");
         }
-        if (tipo_Especifico($PreProduto, "PreProduto") != NULL) {
-            $errors[] = tipo_Especifico($PreProduto,"PreProduto");
+        if (nao_vazio($PreProduto, "PreProduto") != NULL) {
+            $errors[] = nao_vazio($PreProduto,"PreProduto");
         }
         if (nao_vazio($estoqueMin, "estoqueMin") != NULL) {
             $errors[] = nao_vazio($estoqueMin, "estoqueMin");

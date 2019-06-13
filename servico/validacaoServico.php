@@ -6,15 +6,15 @@
             return NULL;
      }
      }
-    function tipo_Especifico($valor,$tipo){
+    function tipo_Especifico($valor){
         $input['valor'] = filter_var($valor, FILTER_VALIDATE_INT);
-        if ($input['valor'] == FALSE) {
-        return "Informe um $tipo válido.<br>";
-}else{
-    return NULL;
-}
-
-}
+        If($input['valor'] ==FALSE){
+            return 'Informe um valor válido';
+        }else{
+            return Null;
+        }
+    }    
+         
     function  validando_email ($email){
     $imput ['email']= filter_var($email, FILTER_VALIDATE_EMAIL); 
     if ($imput ['email']== FALSE){
@@ -23,9 +23,7 @@
         return NULL;
     }
 }
-    function nao_string ($a){    
-    $input ['campo']= strip_tags($_POST["$a"]) &&  htmlentities($_POST["$a"]);
-    $input= $_POST["$a"];
-}
+ 
+
 
 ?>

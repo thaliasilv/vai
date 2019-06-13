@@ -17,7 +17,9 @@
             Estoque mínimo:<br> <input type="number" name="eMin"><br><br>
             Estoque máximo:<br> <input type="number" name="eMax"><br><br><br><br>
             <button style="color: orange" type="submit">Enviar</button>
+            <br> <br>
             
+            <a style="color: orange" href="./produto/listar/">Ver produtos cadastrados</a>
 
         </form>
       

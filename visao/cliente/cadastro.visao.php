@@ -5,14 +5,16 @@
     <div class="caixinha">
         <form action="" method="POST">
                 Nome:<br> <input type="text" name="nomec"><br>
-                CPF:<br> <input type="text" name="cpfc"><br>
-                Sexo:<br> <select name="sexc">
-                        <option value="s"></option>
-                        <option value="masculino">Masculino</option>
-                        <option value="feminino">Feminino</option>
-                        <option value="outro">Outro</option>
-                        </select>
-                        <br>
+                CPF:<br> <input type="text" name="cpf"><br>
+                <br> <br>
+                
+                
+                Sexo: <label> Feminino </label>
+              <input type="radio" name="sexc" value="F">
+              <label> Masculino </label>
+               <input type="radio" name="sexc" value="M">
+              <br><br>
+                
                 Data de Nascimento:<br> <input type="text" name="dataNc"><br>
                 E-mail:<br> <input type="text" name="emailc"><br>
                 Senha:<br> <input type="text" name="senhac"><br>

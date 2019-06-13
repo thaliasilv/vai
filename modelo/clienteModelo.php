@@ -1,8 +1,8 @@
 <?php 
 
-function adicionarCliente($nome, $cpf, $sexo, $aniversario, $email,  $senha, $tipo){
-    $comando= "INSERT INTO cliente (nome, cpf, sexo, aniversario, email, senha, tipo)
-    Values ('$nome', '$cpf','$sexo','$aniversario', '$email', '$senha', '$tipo')";
+function adicionarCliente($nome, $cpf,$sexo, $aniversario, $email,  $senha, $tipo){
+    $comando= "INSERT INTO cliente (nome,cpf, sexo, aniversario, email, senha, tipo)" 
+            ."Values ('$nome','$cpf','$sexo','$aniversario', '$email', '$senha', '$tipo')";
 
     $resultado= mysqli_query($cnx=conn(), $comando);
     if (!$resultado){die ('Erro ao cadastrar cliente'. mysqli_error($cnx)); }

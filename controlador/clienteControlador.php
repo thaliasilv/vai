@@ -5,7 +5,7 @@ require_once "modelo/clienteModelo.php";
 function cadastro (){
     if(ehPost()){
         $nome = $_POST['nomec'];
-        $cpf = $_POST['cpfc'];
+        $cpf = $_POST['cpf'];
         $sexo = $_POST['sexc'];
         $aniversario = $_POST['dataNc'];
         $email = $_POST['emailc'];
@@ -16,9 +16,10 @@ function cadastro (){
         if (nao_vazio($nome, "nome") != NULL) {
             $errors[] = nao_vazio($nome, "nome");
         }
-        if (tipo_Especifico($cpf, "cpf") != NULL) {
-            $errors[] = tipo_Especifico($cpf,"CPF");
+          if (tipo_Especifico($cpf, "cpf") != NULL) {
+            $errors[] = tipo_Especifico($cpf, "cpf");
         }
+        
         if (nao_vazio($sexo, "sexo") != NULL) {
             $errors[] = nao_vazio($sexo, "sexo");
         }
@@ -41,7 +42,7 @@ function cadastro (){
             $dados["errors"] = $errors;
             exibir("cliente/cadastro", $dados);
         } else {
-            $msg = adicionarCliente($nome, $cpf, $sexo, $aniversario, $email,  $senha, $tipo);
+            $msg = adicionarCliente($nome,$cpf, $sexo, $aniversario, $email,  $senha, $tipo);
             echo $msg;
             redirecionar("cliente\listar");    
      

@@ -4,5 +4,6 @@
     <div class="caixinha">
         <h4>Descrição: <?= $produto["descr"]?></h4>
         <h4>Preço: <?= $produto["preco"]?></h4>
+
     </div>
 </div>
