@@ -31,11 +31,11 @@ function adicionar() {
         if (nao_vazio($PreProduto, "PreProduto") != NULL) {
             $errors[] = nao_vazio($PreProduto,"PreProduto");
         }
-        if (nao_vazio($estoqueMin, "estoqueMin") != NULL) {
-            $errors[] = nao_vazio($estoqueMin, "estoqueMin");
+        if (tipo_Especifico($estoqueMin, "estoqueMin") != NULL) {
+            $errors[] = tipo_Especifico($estoqueMin, "estoqueMin");
         }
-        if (nao_vazio($estoqueMax, "estoqueMax") != NULL) {
-            $errors[] = nao_vazio($estoqueMax, "estoqueMax");
+        if (tipo_Especifico($estoqueMax, "estoqueMax") != NULL) {
+            $errors[] = tipo_Especifico($estoqueMax, "estoqueMax");
         }
          if (count($errors) > 0) {
             $dados = array();

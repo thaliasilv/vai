@@ -16,8 +16,8 @@ function cadastro (){
         if (nao_vazio($nome, "nome") != NULL) {
             $errors[] = nao_vazio($nome, "nome");
         }
-          if (tipo_Especifico($cpf, "cpf") != NULL) {
-            $errors[] = tipo_Especifico($cpf, "cpf");
+          if (nao_vazio($cpf, "cpf") != NULL) {
+            $errors[] = nao_vazio($cpf, "cpf");
         }
         
         if (nao_vazio($sexo, "sexo") != NULL) {

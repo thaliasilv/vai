@@ -1,4 +1,4 @@
-        <h2 style="color: orange; margin-top: 5%;"> Cadastre-se aqui :]</h2>
+        <h2 style="color: orange; margin-top: 5%;"> Cadastre-se aqui: </h2>
         <hr align="center" width="100%" size="1" color="orange">
   
 <div class="corpinho">
@@ -21,7 +21,7 @@
                 Tipo de cliente:<br> <input type="text" name="tipoc"><br><br><br><br>
 
                 <button type="submit">Cadastrar</button>
-                <br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br>
                 <a style="color: orange" href="./cliente/listar/">Ver clientes cadastrados</a>
                 
 
