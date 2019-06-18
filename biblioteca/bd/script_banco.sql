@@ -33,7 +33,12 @@ INSERT INTO `mvcd`.`usuario` (`nome`, `senha`, `email`, `papel`) VALUES ('usuari
         tipo varchar (5) not null,
         primary key(id_cliente)
    );
-
+create table categoria(
+     cod_categoria int(10) unsigned not null auto_increment,
+     Nome varchar(30) not null,
+     primary key(cod_categoria)
+     );
+ 
  create table produto(
      id_produto int(11) unsigned not null auto_increment,
      cod_categoria int(10) unsigned not null,
@@ -46,11 +51,7 @@ INSERT INTO `mvcd`.`usuario` (`nome`, `senha`, `email`, `papel`) VALUES ('usuari
      primary key(id_produto),
      foreign key (cod_categoria) references categoria (cod_categoria) on delete cascade on update cascade
      );
-create table categoria(
-     cod_categoria int(10) unsigned not null auto_increment,
-     Nome varchar(30) not null,
-     primary key(cod_categoria)
-     );
+
 create table pedido_produto(
     idproduto int(11)  unsigned not null auto_increment,
     idpedido int(11)  not null,
@@ -74,14 +75,14 @@ create table log_produto(
 );
 create table estoque(
 	idestoque int(11) unsigned not null auto_increment,
-	id_produto int (11) not null,
+	id_produto int (11) unsigned not null,
 	qtde int (11) not null,
 	primary key(idestoque),
-	foreign key (id_produto) references produtos (id_produto) on delete cascade on update cascade
+	foreign key (id_produto) references produto (id_produto) on delete cascade on update cascade
 	);
 create table endereco (
 	idendereco int(11) unsigned not null auto_increment,
-	idusuario int (11) not null,
+	id_cliente int(11) unsigned not null,
 	logradouro varchar (60) not null,
 	numero varchar (7) not null,
 	complemento varchar (60) not null,
@@ -90,7 +91,17 @@ create table endereco (
 	cep varchar (60) not null,
 	primary key(idendereco),
 	foreign key (id_cliente) references cliente (id_cliente) on delete cascade on update cascade );
-
+CREATE TABLE pedido(
+id_pedido INT(11)  unsigned auto_increment NOT NULL,
+id_cliente INT(11) unsigned NOT NULL,
+idendereco INT(11) unsigned NOT NULL,
+datacompra DATE NOT NULL,
+PRIMARY KEY(id_pedido),
+FOREIGN KEY (id_cliente) REFERENCES cliente (id_cliente)
+ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (idendereco) REFERENCES endereco (idendereco)
+ON DELETE CASCADE ON UPDATE CASCADE
+);
 
 
 
