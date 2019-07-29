@@ -40,4 +40,11 @@ function deletarCliente($idCliente) {
    }
 }
 
+function EditarClientePorCodigo($nome, $cpf,$sexo, $aniversario, $email,  $senha, $tipo, $cod){
+   $comando= "UPDATE cliente SET nome='$nome', cpf='$cpf', sexo='$sexo', aniversario='$aniversario', email='$email', senha='$senha', tipo='$tipo')WHERE id_cliente=$cod";
+
+    $resultado= mysqli_query($cnx=conn(), $comando);
+    if (!$resultado){die ('Erro ao atualizar os dados do cliente'. mysqli_error($cnx)); }
+return 'Dados atualizados com sucesso!'; 
+}
  ?>
