@@ -42,3 +42,15 @@ function deletar($cod) {
     deletarCategoria($cod);
     redirecionar("categoria/listar");
 }
+function editar ($cod){
+   if (ehPost()) {
+       $Nome = $_POST["Nome"];
+        EditarCategoriaPorCodigo($nome, $cod);
+       redirecionar("categoria/listar");
+    }else{
+        $dados["categorias"] = MostrarCategoriaPorCodigo($cod);        
+        exibir('categorias/editar', $dados);
+        
+    }
+    
+}

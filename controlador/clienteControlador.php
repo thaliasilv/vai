@@ -64,3 +64,21 @@ function deletar($idCliente) {
     deletarCliente($idCliente);
     redirecionar("cliente/listar");
 }
+function editar ($cod){
+    if(ehPost()){
+        $nome = $_POST['nomec'];
+        $cpf = $_POST['cpf'];
+        $sexo = $_POST['sexc'];
+        $aniversario = $_POST['dataNc'];
+        $email = $_POST['emailc'];
+        $senha = $_POST['senhac'];
+        $tipo = $_POST['tipoc']; 
+        EditarClientePorCodigo($nome, $cpf,$sexo, $aniversario, $email,  $senha, $tipo, $cod);
+        redirecionar("cliente/listar");
+    }else{
+        $dados["clientes"] = MostrarClientePorCodigo($cod);
+        exibir('cliente/editar', $dados);
+        
+    }
+    
+}

@@ -40,3 +40,9 @@ function deletarProduto($idProduto) {
        echo "Deu errado";
    }
 }
+function EditarProdutoPorCodigo($nome, $CategoriaProduto, $DescriProduto, $imagem, $PreProduto, $estoqueMin, $estoqueMax, $cod){
+   $comando= "UPDATE produto SET nome='$nome', cod_categoria='$CategoriaProduto', descr='$DescriProduto', imagem='$imagem', preco='$PreProduto', estoque_minimo='$estoqueMin', estoque_maximo='$estoqueMax' WHERE id_produto='$cod'";
+    $resultado= mysqli_query($cnx=conn(), $comando);
+    if (!$resultado){die ('Erro ao atualizar os produtos'. mysqli_error($cnx)); }
+return 'Atualizados com sucesso!'; 
+}

@@ -1,4 +1,4 @@
-        <h2 style="color: orange; margin-top: 5%;"> Cadastre-se aqui: </h2>
+        <h2 style="color: orange; margin-top: 5%;"> <?= $clientes["nome"] ?> </h2>
         <hr align="center" width="100%" size="1" color="orange">
   
 <div class="corpinho">
@@ -8,13 +8,19 @@
                 CPF:<br> <input type="text" name="cpf" value="<?= $clientes["cpf"] ?>"><br>
                 <br> <br>
                 
-                
+            <?php if($clientes["sexo"]== "F"){ ?>  
                 Sexo: <label> Feminino </label>
-              <input type="radio" name="sexc" value="F">
+                <input type="radio" name="sexo" value="F" checked="">
               <label> Masculino </label>
-               <input type="radio" name="sexc" value="M">
+               <input type="radio" name="sexo" value="M">
               <br><br>
-                
+            <?php }else{ ?> 
+              Sexo: <label> Feminino </label>
+                <input type="radio" name="sexo" value="F">
+              <label> Masculino </label>
+               <input type="radio" name="sexo" value="M" checked="">
+              <br><br>
+            <?php } ?> 
                 Data de Nascimento:<br> <input type="text" name="dataNc" value="<?= $clientes["aniversario"] ?>"><br>
                 E-mail:<br> <input type="text" name="emailc" value="<?= $clientes["email"] ?>"><br>
                 Senha:<br> <input type="text" name="senhac" value="<?= $clientes["senha"] ?>"><br>

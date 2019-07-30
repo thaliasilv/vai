@@ -66,3 +66,23 @@ function deletar($id) {
     deletarProduto($id);
     redirecionar("produto/listar");
 }
+
+function editar ($cod){
+    if(ehPost()){
+       $nome = $_POST["NomeProduto"];
+        $CategoriaProduto = $_POST["CategoriaProduto"];
+        $DescriProduto = $_POST["DescriProduto"];
+        $imagem= $_POST["imagem"];
+        $PreProduto = $_POST["PreProduto"];
+        $estoqueMin = $_POST["eMin"];
+        $estoqueMax = $_POST["eMax"];
+        EditarProdutoPorCodigo($nome, $CategoriaProduto, $DescriProduto, $imagem, $PreProduto, $estoqueMin, $estoqueMax, $cod);
+       redirecionar("produto/listar");
+    }else{
+        $dados["produto"] = MostrarProdutoPorCodigo($cod);
+        $dados["categorias"] = seleciona_todas_as_categorias();
+        exibir('produtos/editar', $dados);
+        
+    }
+    
+}
