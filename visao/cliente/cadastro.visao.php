@@ -4,8 +4,9 @@
 <div class="corpinho">
     <div class="caixinha">
         <form action="" method="POST">
-                Nome:<br> <input type="text" name="nomec"><br>
-                CPF:<br> <input type="text" name="cpf"><br>
+            <h3 style="color: orange;">Sobre:</h3>
+            Nome:<br> <input type="text" name="nomec" ><br>
+                CPF:<br> <input type="text" name="cpf" ><br>
                 <br> <br>
                 
                 
@@ -16,6 +17,13 @@
               <br><br>
                 
                 Data de Nascimento:<br> <input type="text" name="dataNc"><br>
+                Endereço:<br>
+                            <br><input type="text" name="rua"><br>
+                            <br><input type="text" name="número"><br>
+                            <br><input type="text" name="complemento"><br>
+                            <br><input type="text" name="bairro"><br>
+                            <br><input type="text" name="cidade"><br>
+                            <br><input type="text" name="cep"><br>
                 E-mail:<br> <input type="text" name="emailc"><br>
                 Senha:<br> <input type="text" name="senhac"><br>
                 Tipo de cliente:<br> <input type="text" name="tipoc"><br><br><br><br>

@@ -37,8 +37,8 @@ function deletarCategoria($cod) {
        echo "Deu errado";
    }
 }
-function EditarCategoriaPorCodigo($nome, $cod){
-   $comando= "UPDATE produto SET nome='$nome' WHERE cod_categoria='$cod'";
+function EditarCategoriaPorCodigo($Nome, $cod){
+   $comando= "UPDATE categoria SET Nome='$Nome' WHERE cod_categoria='$cod'";
     $resultado= mysqli_query($cnx=conn(), $comando);
     if (!$resultado){die ('Erro ao atualizar categoria'. mysqli_error($cnx)); }
 return 'Atualizada com sucesso!'; 
