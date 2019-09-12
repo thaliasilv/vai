@@ -69,7 +69,7 @@ function deletar($id) {
 
 function editar ($cod){
     if(ehPost()){
-       $nome = $_POST["NomeProduto"];
+        $nome = $_POST["NomeProduto"];
         $CategoriaProduto = $_POST["CategoriaProduto"];
         $DescriProduto = $_POST["DescriProduto"];
         $imagem= $_POST["imagem"];

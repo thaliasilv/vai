@@ -42,6 +42,6 @@ function editar($cod_formadepagamento){
        redirecionar("formadepagamento/listarFormasDePagamento");
 } else{
     $dados["formadepagamento"] = pegarFormaDePagamentoPorId($cod_formadepagamento);
-    exibir("formadepagamento/formulario", $dados);
+    exibir("formadepagamento/editar", $dados);
 } 
 }

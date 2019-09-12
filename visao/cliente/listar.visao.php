@@ -5,17 +5,18 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>  Nome     </th>
-                            <th>  E-mail   </th>
-                            <th>           </th>
-                            <th>           </th>
-                            <th>           </th>
+                            <th>  Nome </th>
+                            <th>  Cpf  </th>
+                            <th>  Email  </th>
                         </tr>
                     </thead>
                     <?php foreach ($clientes as $cliente):?>
+                    
                     <tr>
                         <td><?= $cliente["nome"]?></td>
+                        <td><?= $cliente["cpf"]?></td>                       
                         <td><?= $cliente["email"]?></td>
+                        
                         <td><a href="./cliente/ver/<?=$cliente["id_cliente"]?>">Ver</a></td>
                         <td><a href="./cliente/deletar/<?=$cliente["id_cliente"]?>"> Deletar </a></td>
                         <td><a href="./cliente/editar/<?=$cliente["id_cliente"]?>"> Editar </a></td>

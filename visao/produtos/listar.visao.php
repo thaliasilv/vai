@@ -22,7 +22,7 @@
                     <tr>
                         <td><?= $produto["nome"]?></td>
                         <td><?= $produto["preco"]?></td>
-                        <td><a href="./produto/ver/<?=$produto["id_produto"]?>">Ver detalhes</a></td>
+                        <td><a href="./produto/ver/<?=$produto["id_produto"]?>">Ver</a></td>
                         <td><a href="./produto/deletar/<?=$produto["id_produto"]?>"> Deletar </a></td>
                         <td><a href="./produto/editar/<?=$produto["id_produto"]?>"> Editar </a></td>
                     </tr>

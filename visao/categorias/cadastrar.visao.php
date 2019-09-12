@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -10,8 +9,11 @@
         <div class="corpinho">
             <div class="caixinha">
                 <form action="" method="POST">
-                    Nome da categoria: <input type="text" name="Nome"><br><br><br><br>
-                    <button style="color: orange" type="submit">Cadastrar</button>
+                   
+    <label style="color: orange" for="fname">Nome da categoria</label>
+    <input type="text"  name="Nome" placeholder="Sapatos...">
+   
+    <br><br><button style="color: orange ">Cadastrar</button></a>
                     <br><br><br><br><br><br><br><br>
                     <a href="./categoria/listar/">Ver as categorias cadastradas</a>
                 </form>
@@ -28,3 +30,5 @@
         
     </body>
 </html>
+
+

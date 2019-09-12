@@ -60,10 +60,16 @@ create table pedido_produto(
 );
 CREATE TABLE cupom(
 	idcupom int (11) unsigned not null auto_increment,
-	nomecupom varchar (60) not null,
+	nomeCupom varchar (60) not null,
 	desconto int (11) not null,
 	primary key (idcupom)
 );
+create table forma_de_pagamento(
+        cod_formadepagamento int (60) unsigned not null auto_increment,
+	descricao varchar (60) not null,
+	primary key (cod_formadepagamento)
+);
+
 create table log_produto(
 	id_log int(11) unsigned not null auto_increment,
 	tabela varchar(45) not null,
@@ -83,7 +89,7 @@ create table estoque(
 create table endereco (
 	idendereco int(11) unsigned not null auto_increment,
 	id_cliente int(11) unsigned not null,
-	logradouro varchar (60) not null,
+	rua varchar (60) not null,
 	numero varchar (7) not null,
 	complemento varchar (60) not null,
 	bairro varchar (60) not null,
@@ -102,6 +108,7 @@ ON DELETE CASCADE ON UPDATE CASCADE,
 FOREIGN KEY (idendereco) REFERENCES endereco (idendereco)
 ON DELETE CASCADE ON UPDATE CASCADE
 );
+
 
 
 
